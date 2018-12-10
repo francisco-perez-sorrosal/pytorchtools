@@ -1,0 +1,15 @@
+language: python
+python:
+- 3.6
+install: pip install -U tox-travis
+script: tox
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: fperezsorrosal
+  password:
+    secure: cKF8IGHbtRvZsPofob6L1jq9V57JXFf4vhm0LRf2quKNi+RxNq4f8m7Un2cKqUYfMPo5qFrXAEfjA1M7WYXCSQz6CAKKUEB49T3waZFGSiCg5FBhNO3oJvkEzNfc/Djr6iFYPSFRvtFbq3oIbQitCyrDejWpxOM6O0sn+YyhkzcmLWPHlNJHAmWP+QzTv9NRP0Dbe8QvTeu59Dw1JycWNPVYTqqm1yL32cbmSv/eplIR4JJO1sgPq5+KErBLoCm5FveSL1TXdX++2Lfe7Ko1HGlMvjJvUJ3FIGffbIZ16Ca/B8Pa+DTQbAGMv+BgqYRP2FiPAAwzydJ1hjINu8Ym2rKF/4H2Gwx8qxEMBTMlHEPCrmInQiPQukelmr7PTwvdfMOlsWZECHMBnTUFfHiyAdNVvzA63evFBd9L+OxyG5dXpw5FR805zfxwvzMb2CHYFLUogvCAtCY8COIhkkXD5PsBDpSGSDpnyJdKTYtaedyW4qUrAk1Fm7BKS15m3E8ZItKJkQKxQE6UJ95ArT7wf+tMQb7SFY/WhG1NjXW9zhUz1OIuQadA3jxSw1ZYxfOeEoZ9M0vA4bUNJHn5TbiXSl1F1cdL6l6Stqeta4E6fMF5i+QDyCMG7vc2Nn/MJwhcoxarcKOupRJncTAGTGWPbFzS1jkp8fvzut86FPsv3Ow=
+  on:
+    tags: true
+    repo: francisco-perez-sorrosal/pytorchtools
+    python: 3.6
