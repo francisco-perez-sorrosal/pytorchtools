@@ -35,3 +35,4 @@ class TestPytorchtools(unittest.TestCase):
 
                     break
         assert file_version == version, "file version {} does not match version {}".format(file_version, version)
+        print("Version {}".format(version))
